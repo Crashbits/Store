@@ -1,9 +1,17 @@
+/* eslint-disable react/forbid-prop-types */
 import PropTypes from 'prop-types'
+import Header from './Header'
 
 export default function Page({ children }) {
-  return [children]
+  return (
+    <>
+      <Header />
+      {children}
+    </>
+  )
 }
 
-Page.PropTypes = {
+Page.propTypes = {
+  // eslint-disable-next-line react/require-default-props
   children: PropTypes.any,
 }
